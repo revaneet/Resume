@@ -1,0 +1,283 @@
+%----------------------------------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%----------------------------------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{2pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%----------------------------------------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\color{text-grey}
+
+%-------------------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------------------HEADING----------------------
+\begin{center}
+    \textbf{\Huge Ravneet Kaur} \\ \vspace{10pt}
+    \small \faPhone* \texttt{8288970996} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \texttt{ravneetkaur91997@gmail.com} \hspace{1pt} $|$ 
+    \hspace{1pt} \faGithub \hspace{2pt} \href{https://www.github.com/revaneet}{\myuline {github}} \hspace{1pt} $|$
+    \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://www.linkedin.com/in/revaneetkaur/}{\myuline {linkedin}} \hspace{1pt} $|$
+     \hspace{1pt} \faMedium \hspace{2pt} \href{http://revaneet.medium.com}{\myuline {medium}} $|$
+    \hspace{1pt} \href{https://revaneet.github.io/Ravneet-Portfolio/}{\myuline {portfolio}} \hspace{1pt} 
+    \\ \vspace{-3pt}
+\end{center}
+%----------------------------------------------------
+ 
+%-----------------PROGRAMMING SKILLS-----------------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Languages} {: JavaScript, Swift, C++, HTML/CSS}\vspace{2pt} \\
+     \textbf{Framework \& Tools}     {: ARKit, React, Node Js, Angular, Git, Ionic, RxJs} \vspace{2pt}\\
+     \textbf{App Development}     {: iOS } \vspace{2pt}\\
+     \textbf{Cloud}     {: Microsoft Azure AD B2C, Firebase, AWS Amplify }
+    }}
+ \end{itemize}
+%----------------------------------------------------
+
+%---------------------EXPERIENCE---------------------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Nagarro}{Jan. 2020 -- Present}
+      {Engineer}{Gurgaon , Haryana}
+      \resumeItemListStart
+        \resumeItem{Being a part of Big Data \& AI - Practice, IoT \& XR team at Nagarro, I effectively self-managed during independent pocs and collaborated as a part of a productive team}
+        
+        \resumeItem{As Associate Engineer, solved complex problems using the latest in Cloud (Firebase, AWS Amplify and Azure DevOps), Web (React and Angular), 3d javascript library Babylonjs etc }
+        
+        \resumeItem{Currently working as \textbf{ARKit Lead and Senior iOS Developer} on a project for one of the Swedish conglomerate whose offerings include products and services related to locks, doors, gates, and entrance automation }
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+%------------------------------------------------------
+
+
+%---------------------PROJECTS-------------------------
+
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Client Project for the World's Leading Providers of Reinsurance}}{Mar. 2021 -- Oct.2021}
+          \resumeItemListStart
+            \resumeItem{\textbf{Technology \& Framework} : iOS App Development , Swift , ARKit , Microsoft Azure DevOps}
+            \resumeItem{\textbf{Highlight: } As ARKit Lead, designed algorithms from scratch to solve complex AR problems}
+            \resumeItem{Implemented Authentication and Authorization leveraging Microsoft Azure AD B2C services}
+            \resumeItem{Was involved in setting up iOS deployment CI/CD pipelines on Microsoft Azure}
+            \resumeItem{One of the key developers assisting testers in unit , functional testing and bug fixing}
+          \resumeItemListEnd
+          
+        \resumeProjectHeading
+          {\textbf{Web Configurator Library}}{Sept. 2020 -- Feb. 2021}
+          \resumeItemListStart
+            \resumeItem{\textbf{Technology \& Framework} : React , Babylon js , Node js , Firebase}
+            \resumeItem{Web based 3d configurator that supports addition, customization, saving and live sharing of 3d models and configurators }
+            \resumeItem{Assisted in re-designing the back-end architecture and database schema}
+            \resumeItem{\textbf{Highlight: } Leveraged Firebase Authentication, Realtime Database and Storage services for back-end migration }
+            \resumeItem{Responsible for implementing the save, save as and create shareable link feature of a customized 3d configuration}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+         {\textbf{E-Learner}}{June. 2020 -- Sept 2020}
+          \resumeItemListStart
+            \resumeItem{\textbf{Technology \& Framework} : Ionic + Angular, AWS Amplify}
+            \resumeItem{Hybrid Online Learning App for Nagarro}
+            \resumeItem{Initially part of front-end team}
+            \resumeItem{\textbf{Highlight: } Due to strict deadlines and low availability of back-end developers, successfully collaborated with a fellow front-end developer to build, integrate and deliver back-end with all the requirements within 3 weeks}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+%-------------------------------------------------------
+
+
+
+%----------------------EDUCATION------------------------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Guru Nanak Dev University}{Apr. 2016 -- May 2020}
+      {Bachelor of Technology in Computer Science}{Amritsar, Punjab}
+    %   	\resumeItemListStart
+    % 	\resumeItem {\textbf{Coursework}: Data Structures, Algorithms, Databases, Computer Systems, Machine Learning}
+    %     \resumeItemListEnd
+        
+    % \resumeSubheading
+    %   {The Senior Study II}{Apr. 2014 -- Apr 2016}
+    %   {Class 12th (Non-Medical) CBSE}{Amritsar, Punjab}
+     
+    % \resumeSubheading
+    %   {The Senior Study II}{Apr. 2013 -- Apr 2014}
+    %   {Class 10th CBSE}{Amritsar, Punjab}
+    
+  \resumeSubHeadingListEnd
+%-------------------------------------------------------
+  
+%--------------------CERTIFICATES-----------------------
+% \section {CERTIFICATIONS}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Convolutional Neural Networks , Coursera}{}
+%       {Certificate url : coursera.org/verify/B2MGF4YSBPKD}
+        
+%     \resumeSubheading
+%       {Neural Networks and Deep Learning , Coursera}{}
+%       {Certificate url : coursera.org/verify/G679DFGTELG8}
+     
+%     \resumeSubheading
+%       {Structuring Machine Learning Projects , Coursera}{}
+%       {Certificate url : coursera.org/verify/QUYU4M8KZDYT}
+      
+%     \resumeSubheading
+%       {Improving Deep Neural Networks: Hyperparameter tuning, Regularization and Optimization, Coursera}{}
+%       {Certificate url : coursera.org/verify/ZR2XUKJ995BS}
+    
+%   \resumeSubHeadingListEnd
+%--------------------------------------------------------
+
+%--------------------VOLUNTEERING-----------------------
+\section {VOLUNTEERING}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Hack Zero to One 2.0}{Mar. 2019}
+      {Organizer, CESS , Guru Nanak Dev University, Amritsar}
+    
+    \resumeSubheading
+      {Polaris'18 Techno Cultural Fest}{Oct. 2018}
+      {Organizer, CESS , Guru Nanak Dev University, Amritsar}
+    
+    \resumeSubheading
+      {Hack Zero to One}{Feb. 2018}
+      {Organizer, CESS , Guru Nanak Dev University, Amritsar}
+    
+  \resumeSubHeadingListEnd
+%--------------------------------------------------------
+
+
+%
+\end{document}
